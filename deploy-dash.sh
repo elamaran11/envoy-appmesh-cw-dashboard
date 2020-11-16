@@ -1,7 +1,7 @@
 mkdir -p $DIR/_output
 CLOUDWATCH_NAMESPACE="AppMeshExample/gateway-envoy/StatsD"
-MESH_NAME=yelb
-VIRTUAL_NODE_NAME=yelb-app-server
+MESH_NAME="<Name of your AppMesh>"
+VIRTUAL_NODE_NAME="<Name of your Virtual Node"
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 PROJECT_NAME="$(basename ${DIR})"
 
@@ -18,5 +18,3 @@ EOF
             --capabilities CAPABILITY_IAM \
             --parameter-overrides \
             "DashboardName=${PROJECT_NAME}-${VIRTUAL_NODE_NAME}"
-
-
